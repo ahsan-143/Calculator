@@ -1,0 +1,67 @@
+<script>
+    let first_value, op,val1;
+function calc( val1) {
+val2=document.getElementById("val").value;    
+
+            if(val1=='+' || val1=='-' || val1=='*'|| val1=='/'){
+            first_value=val2;
+            op=val1;
+            document.getElementById("val").value="";
+                }
+            else if(val1=='='){
+                if(op=="+")
+                    document.getElementById("val").value=Number(first_value)+ Number(val2);
+                else if(op=='-')
+                    document.getElementById("val").value=Number(first_value)- Number(val2);
+                else if(op=='/')
+                    document.getElementById("val").value=Number(first_value)/ Number(val2);
+                else if(op=='*')
+                    document.getElementById("val").value=Number(first_value)* Number(val2);
+                }
+            else{
+                document.getElementById("val").value=val1+val2;
+                }
+
+}
+
+
+</script>
+<body>
+<form>
+    <center>
+<table border="1" >
+    <tr>
+        <td colspan="4"> <input type="text" name="val" id="val">   </td>
+    </tr>
+    <tr>
+        <td> <input type="button" name="1" id="1" value="1" onclick="calc('1')">   </td>
+        <td> <input type="button" name="2" id="2" value="2" onclick="calc('2')">   </td>
+        <td> <input type="button" name="3" id="3" value="3" onclick="calc('3')">   </td>
+        <td> <input type="button" name="+" id="+" value="+" onclick="calc('+')">   </td>
+    </tr>
+    <tr>
+        <td> <input type="button" name="4" id="4" value="4" onclick="calc('4')">   </td>
+        <td> <input type="button" name="5" id="5" value="5" onclick="calc('5')">   </td>
+        <td> <input type="button" name="6" id="6" value="6" onclick="calc('6')">   </td>
+        <td> <input type="button" name="-" id="-" value="-" onclick="calc('-')">   </td>
+    </tr>
+    <tr>
+        <td> <input type="button" name="7" id="7" value="7" onclick="calc('7')">   </td>
+        <td> <input type="button" name="8" id="8" value="8" onclick="calc('8')">   </td>
+        <td> <input type="button" name="9" id="9" value="9" onclick="calc('9')">   </td>
+        <td> <input type="button" name="/" id="/" value="/" onclick="calc('/')">   </td>
+    </tr>
+    <tr>
+        <td> <input type="reset" name="C" id="C" value="C" ">   </td>
+        <td> <input type="button" name="0" id="0" value="0" onclick="calc('0')">   </td>
+        <td> <input type="button" name="=" id="=" value="=" onclick="calc('=')">   </td>
+        <td> <input type="button" name="*" id="*" value="*" onclick="calc('*')">   </td>
+    </tr>
+</table>
+</center>
+</form>
+
+
+
+</body>
+</html>
